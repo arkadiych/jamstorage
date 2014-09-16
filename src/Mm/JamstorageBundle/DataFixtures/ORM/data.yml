@@ -1,0 +1,13 @@
+Mm\JamstorageBundle\Entity\Year:
+    year{2012..2014}:
+        name: <current()>
+
+Mm\JamstorageBundle\Entity\JamType:
+    jamType{Raspberry Jam, Strawberry Jam, Cherry Jam, Blueberry Jam, Cranbarry Jam}:
+        name: <current()>
+
+Mm\JamstorageBundle\Entity\JamJar:
+    jamjar{1..20}:
+        comment: 50%? <text(140)>
+        jamType: @jamType*
+        year: @year*

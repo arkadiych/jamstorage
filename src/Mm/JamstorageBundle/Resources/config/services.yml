@@ -1,0 +1,12 @@
+parameters:
+    jamjar.class: Mm\JamstorageBundle\Service\JamJarService
+    clone.class: Mm\JamstorageBundle\Service\CloneService
+
+services:
+    cloneservice:
+        class: %clone.class%
+
+    jamjarservice:
+        class: %jamjar.class%
+        arguments: [@doctrine, @cloneservice]
+

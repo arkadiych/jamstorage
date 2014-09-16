@@ -1,0 +1,25 @@
+services:
+    mm.jamstorage.admin.year:
+        class: Mm\JamstorageBundle\Admin\YearAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Jam", label: "Year", label_translator_strategy: "sonata.admin.label.strategy.native" }
+        arguments:
+            - ~
+            - Mm\JamstorageBundle\Entity\Year
+            - MmJamstorageBundle:YearAdmin
+    mm.jamstorage.admin.jamtype:
+        class: Mm\JamstorageBundle\Admin\JamTypeAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Jam", label: "Jam type", label_translator_strategy: "sonata.admin.label.strategy.native" }
+        arguments:
+            - ~
+            - Mm\JamstorageBundle\Entity\JamType
+            - MmJamstorageBundle:JamTypeAdmin
+    mm.jamstorage.admin.jamjar:
+        class: Mm\JamstorageBundle\Admin\JamJarAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Jam", label: "Jam jar", label_translator_strategy: "sonata.admin.label.strategy.native" }
+        arguments:
+            - ~
+            - Mm\JamstorageBundle\Entity\JamJar
+            - MmJamstorageBundle:JamJarAdmin
